@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import os
 import secrets
 import string
 import sys
 
+
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("the password length is not given!", file = sys.stderr)
+        print("the password length is not given!", file=sys.stderr)
         sys.exit()
 
     chars = string.ascii_letters + string.punctuation + string.digits
