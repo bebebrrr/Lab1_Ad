@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 
-def read_sentences_from_file(file2):
+def read_sentences_from_file(file):
     with open("file2.txt", "r") as file:
         text = file.read()
         sentences = text.split(".")

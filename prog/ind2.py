@@ -4,17 +4,19 @@
 
 def analyze_file(filename):
     wcounts = {}
-
+    
     with open(filename, "r") as file:
-        for line in file:
+        lines = file.readlines()
+        for line in lines:
             words = line.split()
-            for word in words:
+            for word in words: 
                 word = word.lower()
                 if word:
                     if word in wcounts:
                         wcounts[word] += 1
                     else:
                         wcounts[word] = 1
+
 
     wmost = max(wcounts, key=wcounts.get)
     f = wcounts[wmost]
